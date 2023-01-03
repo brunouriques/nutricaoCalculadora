@@ -52,11 +52,11 @@ Ativo: 3 ou mais vezes semanais.">NAF</p>
             </select>
 
             <p>Idade em anos</p>
-            <input type="number" id="iId" value="" placeholder="ex.: 1 (ano)" onblur="getI()">
+            <input type="number" pattern="[0-9]*" inputmode="numeric" id="iId" value="" placeholder="ex.: 1 (ano)" onblur="getI()">
             <p>Peso em quilogramas</p>
-            <input type="number" id="pId" value="" placeholder="ex.: 60 (kg)" onblur="getP()">
+            <input type="number" pattern="[0-9]*" inputmode="numeric" id="pId" value="" placeholder="ex.: 60 (kg)" onblur="getP()">
             <p>Altura em metros</p>
-            <input type="number" id="eId" value="" placeholder="ex.: 1.70 (m)" onblur="getE()">
+            <input type="number" pattern="[0-9]*" inputmode="numeric" id="eId" value="" placeholder="ex.: 1.70 (m)" onblur="getE()">
             <button class="btn" type="button" name="button" onclick="calc()">Calcular</button>
 
             <p> Seu EER é: <span class="outputEER"></span> </p>
@@ -81,9 +81,9 @@ Ativo: 3 ou mais vezes semanais.">NAF</p>
           <div class="card-body">
             <h1 class="card-title" title="Índice de Massa Corpórea.">IMC</h1>
             <p>Digite o peso:</p>
-            <input type="number" id="recebePeso" placeholder="ex.: 60 (kg)" onblur="calcPeso()">
+            <input type="number" pattern="[0-9]*" inputmode="numeric" id="recebePeso" placeholder="ex.: 60 (kg)" onblur="calcPeso()">
             <p>Digite a altura:</p>
-            <input type="number" id="recebeAltura" placeholder="ex.: 1.70 (m)" onblur="calcAltura()">
+            <input type="number" pattern="[0-9]*" inputmode="numeric" id="recebeAltura" placeholder="ex.: 1.70 (m)" onblur="calcAltura()">
             <button class="btn" type="button" id="calcula" onclick="calcIMC()">Calcular</button>
             <p>Seu IMC é: <span class="outputIMC"></span></p>
           </div>
