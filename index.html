@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <!-- Bootstrap styles -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- CSS Styles -->
+
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap" rel="stylesheet">
+
+</head>
+
+<body class="">
+  <nav class="navbar-nav navbar-custom">
+    <a class="navbar-brand mb-0 h1">Calculadoras nutrição</a>
+  </nav>
+
+  <div class="row">
+
+    <!-- Começo EER -->
+
+    <div class="col-lg-3">
+
+      <div id="eerCalc">
+
+        <div class="card " id="nafCalc">
+
+          <div class="card-body">
+            <h1 class="card-title" title="Estimated Energy Requiriment (Necessidade Estimada de Energia).
+É a média de calorias requeridas para se manter o peso atual levando em conta o nível da atividade física em pessoas saudáveis.">EER</h1>
+            <p title="Nível de Atividade Física.
+Atividade física por pelo menos 20 minutos ininterruptamente, com intensidade suficiente para elevar a frequência cardíaca e respiratória.
+Intermediário: 1 ou 2 vezes semanais;
+Sedentário: Nenhuma vez por semana;
+Ativo: 3 ou mais vezes semanais.">NAF</p>
+            <select id="seleçao" onblur="getNAF()">
+              <option value="1">1.00 - Sedentário</option>
+              <option value="1.12">1.12 - Leve</option>
+              <option value="1.27">1.27 - Moderada</option>
+              <option value="1.45">1.45 - intensa</option>
+            </select>
+
+            <p>Idade em anos</p>
+            <input type="text" id="iId" value="" placeholder="ex.: 1 (ano)" pattern="\d*" onblur="getI()">
+            <p>Peso em quilogramas</p>
+            <input type="text" id="pId" value="" placeholder="ex.: 60 (kg)" pattern="\d*" onblur="getP()">
+            <p>Altura em metros</p>
+            <input type="text" id="eId" value="" placeholder="ex.: 1.70 (m)" pattern="\d*" onblur="getE()">
+            <button class="btn" type="button" name="button" onclick="calc()">Calcular</button>
+
+            <p> Seu EER é: <span class="outputEER"></span> </p>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+
+    <!-- Fim EER -->
+
+    <!-- Começo IMC -->
+
+    <div class="col-lg-3">
+
+      <div id="imcCalc">
+
+        <div class="card" id="calculadora">
+
+          <div class="card-body">
+            <h1 class="card-title" title="Índice de Massa Corpórea.">IMC</h1>
+            <p>Digite o peso:</p>
+            <input type="text" id="recebePeso" placeholder="ex.: 60 (kg)" pattern="\d*" onblur="calcPeso()">
+            <p>Digite a altura:</p>
+            <input type="text" id="recebeAltura" placeholder="ex.: 1.70 (m)" pattern="\d*" onblur="calcAltura()">
+            <button class="btn" type="button" id="calcula" onclick="calcIMC()">Calcular</button>
+            <p>Seu IMC é: <span class="outputIMC"></span></p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <!-- Fim IMC -->
+
+    <!-- Início Calc 3 -->
+
+    <div class="col-lg-3">
+
+    </div>
+
+    <!-- Fim Calc 3 -->
+
+    <!-- Início Calc 4 -->
+
+    <div class="col-lg-3">
+
+    </div>
+
+    <!-- Fim Calc 4 -->
+
+    <!-- Início Calc 4 -->
+
+    <div class="col-lg-3">
+
+    </div>
+
+    <!-- Fim Calc 4 -->
+  </div>
+
+
+
+
+  <!-- Script -->
+  <script type="text/javascript" src="script.js"></script>
+
+</body>
+
+</html>
