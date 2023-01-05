@@ -1,40 +1,30 @@
-// Começo seleção opção
+// Começo seleção genero
 
 function showDiv() {
   mostrar = document.getElementById('selecGender').value;
   console.log(mostrar);
   if (mostrar == 'm') {
-  console.log('homem');
-  document.getElementById('Male').style.display = 'block';
-  document.getElementById('Female').style.display = 'none';
+    console.log('homem');
+    document.getElementById('Male').style.display = 'block';
+    document.getElementById('Female').style.display = 'none';
 
-  }
-  else if (mostrar == 'f') {
+  } else if (mostrar == 'f') {
     console.log('mulher');
     document.getElementById('Female').style.display = 'block';
     document.getElementById('Male').style.display = 'none';
+    // Começo mudança de cor na página
+    document.getElementById('calculaF').style.backgroundColor = '#bc69e5';
+    // document.getElementById('calculaF').style.
 
-  }
-  else {
+    // Fim mudança de cor na página
+  } else {
     document.getElementById('Male').style.display = 'none';
     document.getElementById('Female').style.display = 'none';
 
   }
 }
-  // if (mostrar = ) {
 
-
-
-
-
-
-
-
-// escolher genero
-// com base no genero, aparece uma opção de NAF
-// metodo hide?
-
-// Fim seleção opção
+// Fim seleção genero
 
 
 // Começo calculos masculino
@@ -72,8 +62,7 @@ function calc() {
   document.querySelector('.outputEER').textContent = total;
   if (total >= 0) {
     document.getElementById('chartM').style.display = 'block';
-  }
-  else {
+  } else {
     console.log('0');
   }
 }
@@ -121,6 +110,8 @@ function calcIMC() {
 // Fim calculos Masculino
 
 
+// Começo calculos feminino
+
 // Começo EER feminino
 
 function getNAFF() {
@@ -154,8 +145,7 @@ function calcF() {
   document.querySelector('.outputEERF').textContent = totalF;
   if (totalF >= 0) {
     document.getElementById('chartF').style.display = 'block';
-  }
-  else {
+  } else {
     console.log('0');
   }
 }
@@ -200,6 +190,7 @@ function calcIMCF() {
 
 // Fim IMC feminino
 
+// Fim calculos feminino
 
 
 

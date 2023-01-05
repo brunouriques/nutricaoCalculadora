@@ -56,3 +56,26 @@ p {
   color: #006d77;
   border: solid;
 }
+
+/* Page background colors alternative */
+/* body{
+  background-color: #f1edf1;
+}
+.navbar-custom {
+  margin-left: -3.1%;
+    background-color: #bc69e5;
+    font-family: 'Prompt', sans-serif;
+    padding: 1% 0 1% 3%;
+}
+.btn {
+  margin-top: 5%;
+  transition-duration: 0.15s;
+  background-color: #bc69e5;
+  color: white;
+}
+
+.btn:hover {
+  background-color: white;
+  color: #bc69e5;
+  border: solid;
+} */
