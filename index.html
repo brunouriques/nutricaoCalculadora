@@ -37,7 +37,32 @@
 
     <div class="row">
 
-      <!-- Começo EER -->
+      <!-- Começo IMC masculino -->
+
+      <div class="col-lg-3">
+
+        <div id="imcCalc">
+
+          <div class="card" id="calculadora">
+
+            <div class="card-body">
+              <h1 class="card-title" title="Índice de Massa Corpórea.">IMC</h1>
+              <p>Digite o peso:</p>
+              <input type="number" pattern="[0-9]*" inputmode="numeric" id="recebePeso" placeholder="ex.: 60 (kg)" onblur="calcPeso()">
+              <p>Digite a altura:</p>
+              <input type="number" pattern="[0-9]*" inputmode="numeric" id="recebeAltura" placeholder="ex.: 1.70 (m)" onblur="calcAltura()">
+              <button class="btn" type="button" id="calcula" onclick="calcIMC()">Calcular</button>
+              <p>Seu IMC é: <span class="outputIMC"></span></p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      <!-- Fim IMC masculino -->
+
+      <!-- Começo EER masculino -->
 
       <div class="col-lg-3">
 
@@ -75,34 +100,17 @@ Ativo: 3 ou mais vezes semanais.">NAF</p>
 
         </div>
 
-      </div>
-
-      <!-- Fim EER -->
-
-      <!-- Começo IMC -->
-
-      <div class="col-lg-3">
-
-        <div id="imcCalc">
-
-          <div class="card" id="calculadora">
-
-            <div class="card-body">
-              <h1 class="card-title" title="Índice de Massa Corpórea.">IMC</h1>
-              <p>Digite o peso:</p>
-              <input type="number" pattern="[0-9]*" inputmode="numeric" id="recebePeso" placeholder="ex.: 60 (kg)" onblur="calcPeso()">
-              <p>Digite a altura:</p>
-              <input type="number" pattern="[0-9]*" inputmode="numeric" id="recebeAltura" placeholder="ex.: 1.70 (m)" onblur="calcAltura()">
-              <button class="btn" type="button" id="calcula" onclick="calcIMC()">Calcular</button>
-              <p>Seu IMC é: <span class="outputIMC"></span></p>
-            </div>
-
-          </div>
-
-        </div>
+        <!-- Começo gráfico masculino -->
 
       </div>
-      <!-- Fim IMC -->
+      <div id="chartM" class="col-lg-6">
+        <img src="css/img.png" alt="grafico">
+        <p>Resultados de carboidratos, lipídios e proteínas</p>
+      </div>
+
+      <!-- Fim gráfico masculino -->
+
+      <!-- Fim EER masculino -->
 
       <!-- Início Calc 3 -->
 
@@ -138,10 +146,37 @@ Ativo: 3 ou mais vezes semanais.">NAF</p>
 
 
   <!-- Teste Genero começa aqui -->
-  <!-- Começo EER -->
+
   <div id="Female">
 
     <div class="row">
+
+      <!-- Começo IMC feminino-->
+
+      <div class="col-lg-3">
+
+        <div id="imcCalcF">
+
+          <div class="card" id="calculadoraF">
+
+            <div class="card-body">
+              <h1 class="card-title" title="Índice de Massa Corpórea.">IMC</h1>
+              <p>Digite o peso:</p>
+              <input type="number" pattern="[0-9]*" inputmode="numeric" id="recebePesoF" placeholder="ex.: 60 (kg)" onblur="calcPesoF()">
+              <p>Digite a altura:</p>
+              <input type="number" pattern="[0-9]*" inputmode="numeric" id="recebeAlturaF" placeholder="ex.: 1.70 (m)" onblur="calcAlturaF()">
+              <button class="btn" type="button" id="calculaF" onclick="calcIMCF()">Calcular</button>
+              <p>Seu IMC é: <span class="outputIMCF"></span></p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      <!-- Fim IMC feminino -->
+
+      <!-- Começo EER feminino -->
 
       <div class="col-lg-3">
 
@@ -174,43 +209,23 @@ Ativo: 3 ou mais vezes semanais.">NAF</p>
 
               <p> Seu EER é: <span class="outputEERF"></span> </p>
             </div>
-          </div>
 
+          </div>
 
         </div>
 
       </div>
 
-      <!-- Fim EER -->
-
-      <!-- Começo IMC -->
-
-      <div class="col-lg-3">
-
-        <div id="imcCalcF">
-
-          <div class="card" id="calculadoraF">
-
-            <div class="card-body">
-              <h1 class="card-title" title="Índice de Massa Corpórea.">IMC</h1>
-              <p>Digite o peso:</p>
-              <input type="number" pattern="[0-9]*" inputmode="numeric" id="recebePesoF" placeholder="ex.: 60 (kg)" onblur="calcPesoF()">
-              <p>Digite a altura:</p>
-              <input type="number" pattern="[0-9]*" inputmode="numeric" id="recebeAlturaF" placeholder="ex.: 1.70 (m)" onblur="calcAlturaF()">
-              <button class="btn" type="button" id="calculaF" onclick="calcIMCF()">Calcular</button>
-              <p>Seu IMC é: <span class="outputIMCF"></span></p>
-            </div>
-
-          </div>
-
-        </div>
+      <div id="chartF" class="col-lg-6">
+        <img src="css/img.png" alt="">
+        <p>Resultados de carboidratos, lipídios e proteínas</p>
 
       </div>
 
     </div>
 
   </div>
-  <!-- Fim IMC -->
+
 
   <!-- Teste genero termina aqui -->
 

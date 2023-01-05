@@ -26,6 +26,13 @@ body {
   display: none;
 }
 
+#chartM {
+  display: none;
+}
+
+#chartF {
+  display: none;
+}
 
 /*  */
 

@@ -36,9 +36,12 @@ function showDiv() {
 
 // Fim seleção opção
 
-//Começo EER
 
-function getNAFF() {
+// Começo calculos masculino
+
+//Começo EER masculino
+
+function getNAF() {
   select = document.getElementById('seleçao');
   naf = select.value;
   console.log(naf);
@@ -67,11 +70,58 @@ function calc() {
   total = 662 - (9.53 * i) + naf * (15.91 * p) + (539.6 * e);
   total = total.toFixed(2);
   document.querySelector('.outputEER').textContent = total;
+  if (total >= 0) {
+    document.getElementById('chartM').style.display = 'block';
+  }
+  else {
+    console.log('0');
+  }
 }
 
-// Fim EER
+// Fim EER masculino
 
-// Começo EERf
+// Começo IMC Masculino
+
+function calcPeso() {
+  peso = document.getElementById('recebePeso').value;
+  peso = Number(peso);
+  console.log(peso);
+}
+
+function calcAltura() {
+  altura = document.getElementById('recebeAltura').value;
+  altura = Number(altura);
+  console.log(altura);
+}
+
+function calcIMC() {
+  imc = peso / Math.pow(altura, 2);
+  if (imc < 18.5) {
+    clas = ". Você está abaixo do peso.";
+  } else if (imc > 18.5 && imc < 24.9) {
+    clas = ". Você está com peso normal."
+  } else if (imc > 25 && imc < 29.9) {
+    clas = ". Você está com sobrepeso."
+  } else if (imc > 30 && imc < 34.9) {
+    clas = ". Você está com obesidade grau I."
+  } else if (imc > 35 && imc < 39.9) {
+    clas = ". Você está com obesidade grau II."
+  } else if (imF >= 40) {
+    clas = ". Você está com obesidade grau III."
+  } else {
+    clas = " (Valor inválido.)";
+  }
+  imc = imc.toFixed(2);
+  console.log(imc);
+  document.querySelector('.outputIMC').textContent = imc + clas;
+}
+
+// Fim IMC Masculino
+
+// Fim calculos Masculino
+
+
+// Começo EER feminino
 
 function getNAFF() {
   selectF = document.getElementById('seleçaoF');
@@ -102,11 +152,17 @@ function calcF() {
   totalF = 354 - (6.91 * iF) + nafF * (9.36 * pF) + (726 * eF);
   totalF = totalF.toFixed(2);
   document.querySelector('.outputEERF').textContent = totalF;
+  if (totalF >= 0) {
+    document.getElementById('chartF').style.display = 'block';
+  }
+  else {
+    console.log('0');
+  }
 }
 
-// Fim EERf
+// Fim EER feminino
 
-// Começo IMC
+// Começo IMC feminino
 
 function calcPesoF() {
   pesoF = document.getElementById('recebePesoF').value;
@@ -142,7 +198,7 @@ function calcIMCF() {
   document.querySelector('.outputIMCF').textContent = imcF + clasF;
 }
 
-// Fim IMC
+// Fim IMC feminino
 
 
 
