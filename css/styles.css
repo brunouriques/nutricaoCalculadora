@@ -17,8 +17,14 @@ body {
 
 }
 
-/* hovertext */
+/* hidden div selector */
+#Male {
+  display: none;
+}
 
+#Female {
+  display: none;
+}
 
 
 /*  */

@@ -25,105 +25,169 @@
   <nav class="navbar-nav navbar-custom">
     <a class="navbar-brand mb-0 h1">Calculadoras nutrição</a>
   </nav>
-<h3>Selecione o gênero:</h3>
-<select id="selecGender" onblur="">
-  <option value="m">Homem</option>
-  <option value="f">Mulher</option>
+  <h3>Selecione o gênero:</h3>
+  <select id="selecGender" onchange="showDiv()">
+    <option value="m">Homem</option>
+    <option value="f">Mulher</option>
 
-</select>
-  <div class="row">
+  </select>
 
-    <!-- Começo EER -->
+  <div id="Male">
 
-    <div class="col-lg-3">
+    <div class="row">
 
-      <div id="eerCalc">
+      <!-- Começo EER -->
 
-        <div class="card " id="nafCalc">
+      <div class="col-lg-3">
 
-          <div class="card-body">
-            <h1 class="card-title" title="Estimated Energy Requiriment (Necessidade Estimada de Energia).
+        <div id="eerCalc">
+
+          <div class="card " id="nafCalc">
+
+            <div class="card-body">
+              <h1 class="card-title" title="Estimated Energy Requiriment (Necessidade Estimada de Energia).
 É a média de calorias requeridas para se manter o peso atual levando em conta o nível da atividade física em pessoas saudáveis.">EER</h1>
-            <p title="Nível de Atividade Física.
+              <p title="Nível de Atividade Física.
 Atividade física por pelo menos 20 minutos ininterruptamente, com intensidade suficiente para elevar a frequência cardíaca e respiratória.
 Intermediário: 1 ou 2 vezes semanais;
 Sedentário: Nenhuma vez por semana;
 Ativo: 3 ou mais vezes semanais.">NAF</p>
-            <select id="seleçao" onblur="getNAF()">
-              <option value="1">1.00 - Sedentário</option>
-              <option value="1.12">1.12 - Leve</option>
-              <option value="1.27">1.27 - Moderada</option>
-              <option value="1.45">1.45 - intensa</option>
-            </select>
+              <select id="seleçao" onblur="getNAF()">
+                <option value="1">1.00 - Sedentário</option>
+                <option value="1.12">1.12 - Leve</option>
+                <option value="1.27">1.27 - Moderada</option>
+                <option value="1.45">1.45 - intensa</option>
+              </select>
 
-            <p>Idade em anos</p>
-            <input type="number" pattern="[0-9]*" inputmode="numeric" id="iId" value="" placeholder="ex.: 1 (ano)" onblur="getI()">
-            <p>Peso em quilogramas</p>
-            <input type="number" pattern="[0-9]*" inputmode="numeric" id="pId" value="" placeholder="ex.: 60 (kg)" onblur="getP()">
-            <p>Altura em metros</p>
-            <input type="number" pattern="[0-9]*" inputmode="numeric" id="eId" value="" placeholder="ex.: 1.70 (m)" onblur="getE()">
-            <button class="btn" type="button" name="button" onclick="calc()">Calcular</button>
+              <p>Idade em anos</p>
+              <input type="number" pattern="[0-9]*" inputmode="numeric" id="iId" value="" placeholder="ex.: 1 (ano)" onblur="getI()">
+              <p>Peso em quilogramas</p>
+              <input type="number" pattern="[0-9]*" inputmode="numeric" id="pId" value="" placeholder="ex.: 60 (kg)" onblur="getP()">
+              <p>Altura em metros</p>
+              <input type="number" pattern="[0-9]*" inputmode="numeric" id="eId" value="" placeholder="ex.: 1.70 (m)" onblur="getE()">
+              <button class="btn" type="button" name="button" onclick="calc()">Calcular</button>
 
-            <p> Seu EER é: <span class="outputEER"></span> </p>
+              <p> Seu EER é: <span class="outputEER"></span> </p>
+            </div>
           </div>
-        </div>
 
-
-      </div>
-
-    </div>
-
-    <!-- Fim EER -->
-
-    <!-- Começo IMC -->
-
-    <div class="col-lg-3">
-
-      <div id="imcCalc">
-
-        <div class="card" id="calculadora">
-
-          <div class="card-body">
-            <h1 class="card-title" title="Índice de Massa Corpórea.">IMC</h1>
-            <p>Digite o peso:</p>
-            <input type="number" pattern="[0-9]*" inputmode="numeric" id="recebePeso" placeholder="ex.: 60 (kg)" onblur="calcPeso()">
-            <p>Digite a altura:</p>
-            <input type="number" pattern="[0-9]*" inputmode="numeric" id="recebeAltura" placeholder="ex.: 1.70 (m)" onblur="calcAltura()">
-            <button class="btn" type="button" id="calcula" onclick="calcIMC()">Calcular</button>
-            <p>Seu IMC é: <span class="outputIMC"></span></p>
-          </div>
 
         </div>
 
       </div>
 
+      <!-- Fim EER -->
+
+      <!-- Começo IMC -->
+
+      <div class="col-lg-3">
+
+        <div id="imcCalc">
+
+          <div class="card" id="calculadora">
+
+            <div class="card-body">
+              <h1 class="card-title" title="Índice de Massa Corpórea.">IMC</h1>
+              <p>Digite o peso:</p>
+              <input type="number" pattern="[0-9]*" inputmode="numeric" id="recebePeso" placeholder="ex.: 60 (kg)" onblur="calcPeso()">
+              <p>Digite a altura:</p>
+              <input type="number" pattern="[0-9]*" inputmode="numeric" id="recebeAltura" placeholder="ex.: 1.70 (m)" onblur="calcAltura()">
+              <button class="btn" type="button" id="calcula" onclick="calcIMC()">Calcular</button>
+              <p>Seu IMC é: <span class="outputIMC"></span></p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      <!-- Fim IMC -->
+
+      <!-- Início Calc 3 -->
+
+      <div class="col-lg-3">
+
+      </div>
+
+      <!-- Fim Calc 3 -->
+
+      <!-- Início Calc 4 -->
+
+      <div class="col-lg-3">
+
+      </div>
+
+      <!-- Fim Calc 4 -->
+
+      <!-- Início Calc 4 -->
+
+      <div class="col-lg-3">
+
+      </div>
+
+      <!-- Fim Calc 4 -->
     </div>
-    <!-- Fim IMC -->
 
-    <!-- Início Calc 3 -->
-
-    <div class="col-lg-3">
+    <div class="row">
 
     </div>
 
-    <!-- Fim Calc 3 -->
-
-    <!-- Início Calc 4 -->
-
-    <div class="col-lg-3">
-
-    </div>
-
-    <!-- Fim Calc 4 -->
-
-    <!-- Início Calc 4 -->
-
-    <div class="col-lg-3">
-
-    </div>
-
-    <!-- Fim Calc 4 -->
   </div>
+
+
+
+  <!-- Teste Genero começa aqui -->
+  <!-- Começo EER -->
+  <div id="Female">
+
+    <div class="row">
+
+      <div class="col-lg-3">
+
+        <div id="eerCalcF">
+
+          <div class="card " id="nafCalcF">
+
+            <div class="card-body">
+              <h1 class="card-title" title="Estimated Energy Requiriment (Necessidade Estimada de Energia).
+  É a média de calorias requeridas para se manter o peso atual levando em conta o nível da atividade física em pessoas saudáveis.">EER - Feminino</h1>
+              <p title="Nível de Atividade Física.
+  Atividade física por pelo menos 20 minutos ininterruptamente, com intensidade suficiente para elevar a frequência cardíaca e respiratória.
+  Intermediário: 1 ou 2 vezes semanais;
+  Sedentário: Nenhuma vez por semana;
+  Ativo: 3 ou mais vezes semanais.">NAF</p>
+              <select id="seleçaoF" onblur="getNAFF()">
+                <option value="1">1.00 - Sedentário</option>
+                <option value="1.12">1.12 - Leve</option>
+                <option value="1.27">1.27 - Moderada</option>
+                <option value="1.45">1.45 - intensa</option>
+              </select>
+
+              <p>Idade em anos</p>
+              <input type="number" pattern="[0-9]*" inputmode="numeric" id="iIdF" value="" placeholder="ex.: 1 (ano)" onblur="getIF()">
+              <p>Peso em quilogramas</p>
+              <input type="number" pattern="[0-9]*" inputmode="numeric" id="pIdF" value="" placeholder="ex.: 60 (kg)" onblur="getPF()">
+              <p>Altura em metros</p>
+              <input type="number" pattern="[0-9]*" inputmode="numeric" id="eIdF" value="" placeholder="ex.: 1.70 (m)" onblur="getEF()">
+              <button class="btn" type="button" name="button" onclick="calcF()">Calcular</button>
+
+              <p> Seu EER é: <span class="outputEERF"></span> </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Fim EER feminino -->
+
+  <!-- Teste genero termina aqui -->
+
 
 
 
