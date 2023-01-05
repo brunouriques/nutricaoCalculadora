@@ -13,7 +13,7 @@
 
 // Fim seleção opção
 
-//Começo EER
+//Começo EERm
 
 function getNAF() {
   select = document.getElementById('seleçao');
@@ -41,21 +41,25 @@ function getE() {
 }
 
 function calc() {
-  gender = document.getElementById('selecGender').value;
-  cosole.log(gender)
-  if (gender == "m") {
     total = 662 - (9.53 * i) + naf * (15.91 * p) + (539.6 * e);
     total = total.toFixed(2);
     document.querySelector('.outputEER').textContent = total;
-
-  } else {
-    total = 354 - (6.91 * i) + naf * (9.36 * p) + (726 * e);
-    total = total.toFixed(2);
-    document.querySelector('.outputEER').textContent = total;
-  }
 }
 
-// Fim EER
+// Fim EERm
+
+// Começo EERf
+
+
+
+
+
+
+
+
+
+
+// Fim EERf
 
 // Começo IMC
 
