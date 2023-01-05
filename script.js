@@ -106,6 +106,45 @@ function calcF() {
 
 // Fim EERf
 
+// Começo IMC
+
+function calcPesoF() {
+  pesoF = document.getElementById('recebePesoF').value;
+  pesoF = Number(pesoF);
+  console.log(pesoF);
+}
+
+function calcAlturaF() {
+  alturaF = document.getElementById('recebeAlturaF').value;
+  alturaF = Number(alturaF);
+  console.log(alturaF);
+}
+
+function calcIMCF() {
+  imcF = pesoF / Math.pow(alturaF, 2);
+  if (imcF < 18.5) {
+    clasF = ". Você está abaixo do peso.";
+  } else if (imcF > 18.5 && imcF < 24.9) {
+    clasF = ". Você está com peso normal."
+  } else if (imcF > 25 && imcF < 29.9) {
+    clasF = ". Você está com sobrepeso."
+  } else if (imcF > 30 && imcF < 34.9) {
+    clasF = ". Você está com obesidade grau I."
+  } else if (imcF > 35 && imcF < 39.9) {
+    clasF = ". Você está com obesidade grau II."
+  } else if (imcF >= 40) {
+    clasF = ". Você está com obesidade grau III."
+  } else {
+    clasF = " (Valor inválido.)";
+  }
+  imcF = imcF.toFixed(2);
+  console.log(imcF);
+  document.querySelector('.outputIMCF').textContent = imcF + clasF;
+}
+
+// Fim IMC
+
+
 
 
 

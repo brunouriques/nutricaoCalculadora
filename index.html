@@ -27,6 +27,7 @@
   </nav>
   <h3>Selecione o gênero:</h3>
   <select id="selecGender" onchange="showDiv()">
+    <option value="">Selecionar</option>
     <option value="m">Homem</option>
     <option value="f">Mulher</option>
 
@@ -46,7 +47,7 @@
 
             <div class="card-body">
               <h1 class="card-title" title="Estimated Energy Requiriment (Necessidade Estimada de Energia).
-É a média de calorias requeridas para se manter o peso atual levando em conta o nível da atividade física em pessoas saudáveis.">EER</h1>
+É a média de calorias requeridas para se manter o peso atual levando em conta o nível da atividade física em pessoas saudáveis.">EER - Masculino</h1>
               <p title="Nível de Atividade Física.
 Atividade física por pelo menos 20 minutos ininterruptamente, com intensidade suficiente para elevar a frequência cardíaca e respiratória.
 Intermediário: 1 ou 2 vezes semanais;
@@ -173,6 +174,32 @@ Ativo: 3 ou mais vezes semanais.">NAF</p>
 
               <p> Seu EER é: <span class="outputEERF"></span> </p>
             </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <!-- Fim EER -->
+
+      <!-- Começo IMC -->
+
+      <div class="col-lg-3">
+
+        <div id="imcCalcF">
+
+          <div class="card" id="calculadoraF">
+
+            <div class="card-body">
+              <h1 class="card-title" title="Índice de Massa Corpórea.">IMC</h1>
+              <p>Digite o peso:</p>
+              <input type="number" pattern="[0-9]*" inputmode="numeric" id="recebePesoF" placeholder="ex.: 60 (kg)" onblur="calcPesoF()">
+              <p>Digite a altura:</p>
+              <input type="number" pattern="[0-9]*" inputmode="numeric" id="recebeAlturaF" placeholder="ex.: 1.70 (m)" onblur="calcAlturaF()">
+              <button class="btn" type="button" id="calculaF" onclick="calcIMCF()">Calcular</button>
+              <p>Seu IMC é: <span class="outputIMCF"></span></p>
+            </div>
 
           </div>
 
@@ -183,8 +210,7 @@ Ativo: 3 ou mais vezes semanais.">NAF</p>
     </div>
 
   </div>
-
-  <!-- Fim EER feminino -->
+  <!-- Fim IMC -->
 
   <!-- Teste genero termina aqui -->
 
